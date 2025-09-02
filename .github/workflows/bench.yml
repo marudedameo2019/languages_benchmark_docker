@@ -20,7 +20,7 @@ jobs:
 
       - name: Run benchmark script
         run: |
-          sh ./run_bench.sh
+          sh ./run_bench.sh all
 
       - name: Move HTML files
         run: |
