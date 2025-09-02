@@ -133,7 +133,6 @@ rm Dockerfile
 
 echo ""
 echo "--- 3. ベンチマークをDockerコンテナで実行 ---"
-echo "マウントするディレクトリ: $(pwd)/$REPO_DIR"
 
 # リポジトリに用意されているスクリプトを直接実行した後、グラフも生成
 docker run --rm -i \
