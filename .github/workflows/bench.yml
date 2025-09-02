@@ -1,0 +1,31 @@
+name: Run Benchmark
+
+on:
+  push:
+    branches:
+      - main # mainブランチへのプッシュ時に実行
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-docker@v3
+
+      - name: Run benchmark script
+        run: |
+          ./run_bench.sh
+
+      - name: Move HTML files
+        run: |
+          mkdir -p examples
+          mv languages-simpleplot/*.html examples/
+
+      - name: Commit and push HTML results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Update benchmark results'
+          file_pattern: 'examples/*.html'
