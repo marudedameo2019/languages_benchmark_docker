@@ -5,6 +5,9 @@ on:
     branches:
       - main # mainブランチへのプッシュ時に実行
 
+permissions:
+  contents: write # リポジトリへの書き込み権限を許可
+
 jobs:
   benchmark:
     runs-on: ubuntu-latest
