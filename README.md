@@ -11,4 +11,4 @@ https://github.com/bddicken/languages
 # 結果
 
 - languages-simpleplot/current_chart.html: 普通のベンチマーク結果
-- languages-simpleplot/legacy_chart.html: 普通のベンチマーク結果
+- languages-simpleplot/legacy_chart.html: 古い方のベンチマーク結果
