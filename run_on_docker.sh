@@ -2,8 +2,8 @@ set -e
 legacy=false
 current=true
 plotonly=false
-if [ "0" = "1" ]; then
-    case "" in
+if [ "$#" = "1" ]; then
+    case "$1" in
         legacy)
             legacy=true
             current=false

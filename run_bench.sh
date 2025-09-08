@@ -38,7 +38,7 @@ docker run --rm -i \
     --name "$CONTAINER_NAME" \
     --volume "$(pwd)":/app \
     "$IMAGE_NAME" \
-    /bin/bash <run_on_docker.sh
+    /bin/bash run_on_docker.sh $*
 
 echo ""
 echo "--- ベンチマーク実行完了 ---"
